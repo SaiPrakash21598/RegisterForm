@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>College Register</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+.jumbotron
+{
+  text-align:center;
+  position: relative;
+  padding:0 ;
+  margin-top:50px;
+  background-color:#101010;
+  color:white;
+}
+
+.required
+{
+    color: red;
+	content: "***";
+}
+
+label
+{
+  padding-top: 0px;
+  font-weight:600px;
+}
+
+input[type=text]
+{
+  width: 90%;
+}
+
+.col sm-3 .email
+{
+  width:30px;
+}
+
+.contents
+{
+  
+  background-color: white;
+  padding-top: 45px;
+  width: 1140px;
+  padding-bottom: 17px;
+
+}
+
+body
+{
+  background-color:grey;
+  background-image:url("ima.jpg");
+}
+
+
+</style>
+
+<body>
+<div class="container">
+<div class="jumbotron">
+   <h1>College Name</h1>
+</div>
+</div>
+
+<form name="myForm" onsubmit="return validateForm()" class="form-horizontal" method="GET">
+   
+    <div class="container contents">
+	<div class="form-group ">
+    <label class="col-sm-5 control-label">First Name</label><span class="required">**</span>
+    <div class="col-sm-2 inputGroupContainer">
+	<div class="input-group">
+         <span class="input-group-addon"><i class="glyphicon glyphicon-user style=color:blue"></i></span>
+        <input type="text"  placeholder="First Name" name="fname"  class="form-control" size="80" required>
+	</div>
+    </div>
+	</div>
+	
+	<div class="form-group">
+	<label  class="col-sm-5 control-label">Last Name</label>
+    <div class="col-sm-2 inputGroupContainer"> 
+	<div class="input-group">
+	    <span class="input-group-addon"><i class="glyphicon glyphicon-user style=color:blue"></i></span>
+        <input type="text" placeholder="Last Name" name="lname" class="form-control" >
+    </div>
+	</div>
+	</div>
+	
+	<div class="form-group">
+    <label  class="col-sm-5  email control-label">Email </label>
+    <div class="col-sm-3 inputGroupContainer">
+	<div class="input-group">
+		<span class="input-group-addon"><i class="glyphicon glyphicon-envelope "></i></span>
+        <input type="email"  placeholder="Email" class="form-control" name= "email" class="form-control" >
+    </div>
+    </div>
+	</div>
+	
+	<div class="form-group">
+    <label  class="col-sm-5 control-label">Password</label><span class="required">**</span>
+    <div class="col-sm-2 inputGroupContainer">
+	<div class="input-group">
+	    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i> </i></span>
+        <input type="password"  placeholder="Password" name="password" class="form-control" pattern=".{6,}" title="Six or more characters" required>
+    </div>
+    </div>
+	</div>
+	
+	<div class="form-group">
+    <label  class="col-sm-5 control-label">Phone number</label><span class="required">**</span>
+    <div class="col-sm-2 inputGroupContainer">
+    <div class="input-group">
+		<span class="input-group-addon"><i class="glyphicon glyphicon-phone "></i></span>
+        <input type="phoneNumber"  placeholder="phonenumber"  name="phone" class="form-control" required>
+    </div>
+    </div>
+	</div>
+	
+	<div class="form-group">
+    <label class="control-label col-sm-5">Address For Communicatuion</label>
+	<div class="col-sm-4 inputGroupContainer">
+	<div class="input-group">
+		<span class="input-group-addon"><i class="glyphicon glyphicon-home "></i></span>
+    <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" name="address" placeholder="Address" rows="3"></textarea>    
+	</div>
+	</div>
+	</div>
+	
+	
+	<div class="form-group">
+    <label  class="col-sm-5 control-label">Date of Birth</label>
+    <div class="col-sm-2 inputGroupContainer">
+	<div class="input-group">
+		<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+        <input type="date"  placeholder="Date Of Birth" class="form-control" name="dob">
+    </div>
+    </div>
+	</div>
+    
+	
+
+	<div class="form-group">
+	<label  class="col-sm-5 control-label">Gender</label>
+    
+	<div class="col-sm-2">
+    <div class="form-check">
+    <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="exampleRadios" value="option1" >Male
+	</label>
+    </div>
+	</div>
+    
+	<div class="col-sm-2">
+	<div class="form-check">
+    <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="exampleRadios"  value="option2">Female
+	</label>
+    </div>
+    </div>
+	
+	</div>
+	
+	
+	<div class="form-group">
+    <label class="control-label col-sm-5">Department</label>
+	<div  class="col-sm-4 inputGroupContainer">
+	<div class="input-group">
+		<span class="input-group-addon"><i class="glyphicon glyphicon-education "></i></span>
+    <select class="form-control" >
+        <option>Mechanical Engineering</option>
+        <option>Chemical Engineering</option>
+        <option>C.S.E</option>
+        <option>I.T</option>
+		<option>Automobile Engineering</option>
+		<option>Marine Engineering</option>
+		<option>Aeronautical</option>
+    </select>
+	</div>
+	</div>
+	</div>
+	
+	<div class="form-group">
+	<label class="control-label col-sm-5">Pre-Qualifications</label>
+	
+	<div class="col-sm-1">
+	<div class="form-check">
+	<label class="checkbox-inline">
+	<input class="form-check-input" type="checkbox" name="radio" >S.S.L.C</label>
+	</div>
+	</div>
+	
+	<div class="col-sm-1">
+	<div class="form-check">
+    <label class="checkbox-inline">
+	<input class="form-check-input" type="checkbox" name="radio">H.S.C</label>
+	</div>
+	</div>
+	
+	<div class="col-sm-1">
+	<div class="form-check">
+    <label class="checkbox-inline">
+	<input class="form-check-input" type="checkbox" name="radio">Diplomo</label>
+	</div>
+	</div>
+	</div>
+	
+	<br />
+
+	
+	<div class="form-group">
+	<div class="text-center">
+    <input type="submit"  style="background-color:white" value="Register">	
+    </div>
+	</div>
+	</div>
+	</div>
+   
+	
+</form>
+
+<script>
+function validateForm() 
+{
+  var a = document.forms["myForm"]["fname"].value;
+  var b = document.forms["myForm"]["lname"].value;
+  var c = document.forms["myForm"]["email"].value;
+  var d = document.forms["myForm"]["password"].value;
+  var e = document.forms["myForm"]["phone"].value;
+  var f = document.forms["myForm"]["address"].value;
+  var g = document.forms["myForm"]["dob"].value;
+  var h = document.forms["myForm"]["exampleRadios"].value;
+  
+
+  if (a == "") 
+  {
+    alert("firstName field is missing");
+    return false;
+  }
+  
+  else if (c == "") 
+  {
+    alert("Email field is missing");
+    return false;
+  }
+  
+  else if (d == "") 
+  {
+    alert("Password field is missing");
+    return false;
+  }
+  
+  else if (e == "") 
+  {
+    alert("phonenumber field is missing");
+    return false;
+  }
+  
+  else if (f == "") 
+  {
+    alert("Address field is missing");
+    return false;
+  }
+  
+  else if (g == "") 
+  {
+    alert("date of birth is not selected");
+    return false;
+  }
+  
+  else if (h == "") 
+  {
+    alert("Gender section is not selected");
+    return false;
+  }
+  else
+  {
+	document.write("Welcome-"+a,b+"<br />");
+    document.write("Email-ID-"+c+"<br />");
+	document.write("Mobile-"+e+"<br />");
+	document.write("Address-"+f+"<br />");
+	document.write("Date Of Birth-"+g+"<br />");
+	
+  }
+  
+  
+  
+  
+  
+ 
+}
+</script>
+
+</body>
+</html>
